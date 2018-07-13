@@ -57,10 +57,10 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-/*
- * below code is for set onCLick event at XML side
- * then use this below code, for call another Explicit Intent
- */
+    /*
+     * below code is for set onCLick event at XML side
+     * then use this below code, for call another Explicit Intent
+     */
 
 //    public void openNumbersList(View view) {
 //        Intent intent = new Intent(this, NumberActivity.class);
