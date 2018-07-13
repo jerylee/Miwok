@@ -60,7 +60,7 @@ public class NumberActivity extends AppCompatActivity {
         }
 
         //this is using For Loop
-        for (int x=0; x<number.size(); x=x+1){
+        for (int x=0; x<number.size(); x++){
             TextView numberView = new TextView(this);
             numberView.setText(number.get(x));
             rootView.addView(numberView);
