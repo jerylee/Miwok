@@ -2,13 +2,7 @@ package com.example.android.miwok;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
-import android.widget.ArrayAdapter;
-import android.widget.GridView;
-import android.widget.LinearLayout;
 import android.widget.ListView;
-import android.widget.Spinner;
-import android.widget.TextView;
 
 import java.util.ArrayList;
 
@@ -17,7 +11,7 @@ public class NumberActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_number);
+        setContentView(R.layout.word_list);
 
 //        String[] ArrayWord = new String[10];
 //        ArrayWord[0]="one";
@@ -36,17 +30,15 @@ public class NumberActivity extends AppCompatActivity {
         ArrayList<Word> words = new ArrayList<>();
         //add two object to our word class
         words.add(new Word("luti","one"));
-        words.add(new Word("two","two"));
-        words.add(new Word("three","three"));
-        words.add(new Word("four","four"));
-        words.add(new Word("five","five"));
-        words.add(new Word("six","six"));
-        words.add(new Word("seven","seven"));
-        words.add(new Word("eight","eight"));
-        words.add(new Word("nine","nine"));
-        words.add(new Word("ten","ten"));
-
-
+        words.add(new Word("otiiko","two"));
+        words.add(new Word("tolookosu","three"));
+        words.add(new Word("oyyisa","four"));
+        words.add(new Word("massokka","five"));
+        words.add(new Word("temmokka","six"));
+        words.add(new Word("kenekaku","seven"));
+        words.add(new Word("kawinta","eight"));
+        words.add(new Word("wo’e","nine"));
+        words.add(new Word("na’aacha","ten"));
 
 //        number.add("one");
 //        number.add("two");
@@ -88,7 +80,7 @@ public class NumberActivity extends AppCompatActivity {
 
  //       ArrayAdapter<Word> itemAdapter = new ArrayAdapter<>(this, R.layout.list_item, words);
         WordAdapter itemAdapter = new WordAdapter(this, words);
-        ListView listView = findViewById(R.id.rootView);
+        ListView listView = findViewById(R.id.word_list);
         listView.setAdapter(itemAdapter);
 
 //        Spinner gridView = findViewById(R.id.rootView);
