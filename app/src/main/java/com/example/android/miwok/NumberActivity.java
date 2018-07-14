@@ -3,7 +3,11 @@ package com.example.android.miwok;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.ArrayAdapter;
+import android.widget.GridView;
 import android.widget.LinearLayout;
+import android.widget.ListView;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -29,43 +33,66 @@ public class NumberActivity extends AppCompatActivity {
 //
 //        Log.v("LOG:","ArrayWord index 5 : "+ArrayWord[5]);
 
-        ArrayList<String> number = new ArrayList<>();
-        number.add("one");
-        number.add("two");
-        number.add("tree");
-        number.add("four");
-        number.add("five");
-        number.add("six");
-        number.add("seven");
-        number.add("eight");
-        number.add("nine");
-        number.add("ten");
-        number.add("");
+        ArrayList<Word> words = new ArrayList<>();
+        //add two object to our word class
+        words.add(new Word("luti","one"));
+        words.add(new Word("two","two"));
+        words.add(new Word("three","three"));
+        words.add(new Word("four","four"));
+        words.add(new Word("five","five"));
+        words.add(new Word("six","six"));
+        words.add(new Word("seven","seven"));
+        words.add(new Word("eight","eight"));
+        words.add(new Word("nine","nine"));
+        words.add(new Word("ten","ten"));
+
+
+
+//        number.add("one");
+//        number.add("two");
+//        number.add("tree");
+//        number.add("four");
+//        number.add("five");
+//        number.add("six");
+//        number.add("seven");
+//        number.add("eight");
+//        number.add("nine");
+//        number.add("ten");
+//        number.add("");
 //        Log.v("Log ", "index value 0:" + number.get(0) + ", 1:" + number.get(1) + ", 2:" + number.get(2) + ", 3:" + number.get(3) + ", 4:" + number.get(4) + ", 5:" + number.get(5) + ", 6:" + number.get(6) + ", 7:" + number.get(7) + ", 8:" + number.get(8) + ", 9:" + number.get(9));
 //        Log.v("Log ", "index Size is : " + number.size());
 
-        LinearLayout rootView = findViewById(R.id.rootView);
-//        TextView numberView = new TextView(this);
-//        numberView.setText(number.get(0));
-//        rootView.addView(numberView);
+//        LinearLayout rootView = findViewById(R.id.rootView);
+////        TextView numberView = new TextView(this);
+////        numberView.setText(number.get(0));
+////        rootView.addView(numberView);
+//
+//
+//        //this is using While Loop
+//        int i = 0; //declaration variable for doing looping.
+//        while (i < number.size()) { //the condition/how many time the looping will happen.
+//            TextView numberView = new TextView(this);
+//            numberView.setText(number.get(i));
+//            rootView.addView(numberView);
+//            i++; // --> it's same like "i = i + 1;"
+//        }
+//
+//        //this is using For Loop
+//        for (int x=0; x<number.size(); x++){ // ( declaration variable for doing looping; condition/how many time the lopping; variable changing )
+//            TextView numberView = new TextView(this);
+//            numberView.setText(number.get(x));
+//            rootView.addView(numberView);
+//        }
+//
+//
 
+ //       ArrayAdapter<Word> itemAdapter = new ArrayAdapter<>(this, R.layout.list_item, words);
+        WordAdapter itemAdapter = new WordAdapter(this, words);
+        ListView listView = findViewById(R.id.rootView);
+        listView.setAdapter(itemAdapter);
 
-        //this is using While Loop
-        int i = 0;
-        while (i < number.size()) {
-            TextView numberView = new TextView(this);
-            numberView.setText(number.get(i));
-            rootView.addView(numberView);
-            i++; // --> it's same like "i = i + 1;"
-        }
-
-        //this is using For Loop
-        for (int x=0; x<number.size(); x++){
-            TextView numberView = new TextView(this);
-            numberView.setText(number.get(x));
-            rootView.addView(numberView);
-        }
+//        Spinner gridView = findViewById(R.id.rootView);
+//        gridView.setAdapter(itemAdapter);
 
     }
-
 }
