@@ -13,7 +13,7 @@ public class FamilyActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.word_list);
 
-        ArrayList<Word> words = new ArrayList<Word>();
+        ArrayList<Word> words = new ArrayList<>();
         words.add(new Word("әpә", "father"));
         words.add(new Word("әṭa", "mother"));
         words.add(new Word("angsi", "son"));

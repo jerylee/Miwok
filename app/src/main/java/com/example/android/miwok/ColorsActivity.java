@@ -13,7 +13,7 @@ public class ColorsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.word_list);
 
-        ArrayList<Word> words = new ArrayList<Word>();
+        ArrayList<Word> words = new ArrayList<>();
         words.add(new Word("red", "weṭeṭṭi"));
         words.add(new Word("mustard yellow", "chiwiiṭә"));
         words.add(new Word("dusty yellow", "ṭopiisә"));
