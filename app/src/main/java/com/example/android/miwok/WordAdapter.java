@@ -32,15 +32,23 @@ public class WordAdapter extends ArrayAdapter<Word> {
 
         Word currentWordAdapter = getItem(position);
 
-        ImageView iconView = listItemView.findViewById(R.id.icon);
-        iconView.setImageResource(currentWordAdapter.getImageResourceId());
-
         TextView textView = listItemView.findViewById(R.id.miwok_text_view);
         textView.setText(currentWordAdapter.getmMiwokTranslation());
 
         TextView textView2 = listItemView.findViewById(R.id.default_text_view);
         textView2.setText(currentWordAdapter.getmDefaultTranslation());
 
+
+        ImageView imageView = listItemView.findViewById(R.id.image);
+        //Set if have Image resource
+        if (currentWordAdapter.hasImage()) {
+            imageView.setImageResource(currentWordAdapter.getImageResourceId());
+            //if HAVE image we must set the Visibility is VISIBLE
+            imageView.setVisibility(View.VISIBLE);
+        } else {
+            //if no any Image resource set it become GONE/No display the image
+            imageView.setVisibility(View.GONE);
+        }
 
         return listItemView;
     }

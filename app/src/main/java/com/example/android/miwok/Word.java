@@ -2,9 +2,12 @@ package com.example.android.miwok;
 
 public class Word {
 
-    private int mImageResourceId;
+
     private String mMiwokTranslation;
     private String mDefaultTranslation;
+
+    private static final int NO_IMAGE_PROVIDED = -1; //<--- set NO Image
+    private int mImageResourceId = NO_IMAGE_PROVIDED;
 
     //MAKE the App still WORKING FINE, event have some Menu don't have Input Image
     //We must have two different Constructor ( this case is Word )
@@ -45,5 +48,10 @@ public class Word {
 
     public String getmMiwokTranslation() {
         return mMiwokTranslation;
+    }
+
+    //for make option Have Image or NOT
+    public boolean hasImage() {
+        return mImageResourceId != NO_IMAGE_PROVIDED;
     }
 }
