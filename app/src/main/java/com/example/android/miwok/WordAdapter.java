@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 
@@ -31,11 +32,14 @@ public class WordAdapter extends ArrayAdapter<Word> {
 
         Word currentWordAdapter = getItem(position);
 
-        TextView x = listItemView.findViewById(R.id.miwok_text_view);
-        x.setText(currentWordAdapter.getmMiwokTranslation());
+        ImageView iconView = listItemView.findViewById(R.id.icon);
+        iconView.setImageResource(currentWordAdapter.getImageResourceId());
 
-        TextView z = listItemView.findViewById(R.id.default_text_view);
-        z.setText(currentWordAdapter.getmDefaultTranslation());
+        TextView textView = listItemView.findViewById(R.id.miwok_text_view);
+        textView.setText(currentWordAdapter.getmMiwokTranslation());
+
+        TextView textView2 = listItemView.findViewById(R.id.default_text_view);
+        textView2.setText(currentWordAdapter.getmDefaultTranslation());
 
 
         return listItemView;
