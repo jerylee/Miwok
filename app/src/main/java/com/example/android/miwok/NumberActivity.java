@@ -79,7 +79,7 @@ public class NumberActivity extends AppCompatActivity {
 //
 
         //       ArrayAdapter<Word> itemAdapter = new ArrayAdapter<>(this, R.layout.list_item, words);
-        WordAdapter itemAdapter = new WordAdapter(this, words);
+        WordAdapter itemAdapter = new WordAdapter(this, words, R.color.category_numbers);
         ListView listView = findViewById(R.id.word_list);
         listView.setAdapter(itemAdapter);
 
