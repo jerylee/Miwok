@@ -18,11 +18,11 @@ public class WordAdapter extends ArrayAdapter<Word> {
 
     private static final String LOG_TAG = WordAdapter.class.getSimpleName();
 
-    private int mColorResourceId;
+    private int mColorResourceId; //for set differed color each activity
 
     public WordAdapter(Activity context, ArrayList<Word> words, int colorResourceId) {
         super(context, 0, words);
-        mColorResourceId = colorResourceId;
+        mColorResourceId = colorResourceId; //for set differed color each activity
     }
 
     @NonNull
@@ -54,7 +54,7 @@ public class WordAdapter extends ArrayAdapter<Word> {
         }
 
 
-        //Set color eact Activity/menu
+        //for set differed color each activity
         View textContainer = listItemView.findViewById(R.id.text_container);
         int color = ContextCompat.getColor(getContext(), mColorResourceId);
         textContainer.setBackgroundColor(color);
