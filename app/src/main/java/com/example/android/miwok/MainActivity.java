@@ -19,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
         TextView family = findViewById(R.id.family);
         TextView colors = findViewById(R.id.colors);
         TextView phrases = findViewById(R.id.phrases);
+        TextView music = findViewById(R.id.music_player);
 
 
         numbers.setOnClickListener(new View.OnClickListener() {
@@ -55,6 +56,16 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(phrasesIntent);
             }
         });
+
+        music.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent musicIntent = new Intent(MainActivity.this, MusicPlayer.class);
+                startActivity(musicIntent);
+            }
+        });
+
+
     }
 
     /*

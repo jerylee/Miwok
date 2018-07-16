@@ -30,6 +30,9 @@
             android:name=".ColorsActivity"
             android:label="@string/category_colors" />
 
+        <activity
+            android:name=".MusicPlayer"
+            android:label="@string/category_music_player" />
 
     </application>
 

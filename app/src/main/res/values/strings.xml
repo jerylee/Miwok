@@ -13,4 +13,9 @@
 
     <!-- Category name for the vocabulary words for family members [CHAR LIMIT=20] -->
     <string name="category_family">Family Members</string>
+
+    <!-- Category name for phrases [CHAR LIMIT=20] -->
+    <string name="category_music_player">Music Player</string>
+    <string name="pause">Pause</string>
+    <string name="play">Play</string>
 </resources>

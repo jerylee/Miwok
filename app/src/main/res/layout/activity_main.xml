@@ -45,4 +45,10 @@
         android:background="@color/category_phrases"
         android:text="@string/category_phrases" />
 
+    <TextView
+        android:id="@+id/music_player"
+        style="@style/CategoryStyle"
+        android:background="@color/category_music_player"
+        android:text="@string/category_music_player" />
+
 </LinearLayout>
