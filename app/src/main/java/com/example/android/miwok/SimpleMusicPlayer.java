@@ -8,14 +8,14 @@ import android.widget.Button;
 import android.widget.Toast;
 
 
-public class MusicPlayer extends AppCompatActivity {
+public class SimpleMusicPlayer extends AppCompatActivity {
     private Button b1, b2;
     private MediaPlayer mediaPlayer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.music_player);
+        setContentView(R.layout.simple_music_player);
 
 
         b1 = findViewById(R.id.btn_play);

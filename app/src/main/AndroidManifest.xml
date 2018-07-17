@@ -31,7 +31,7 @@
             android:label="@string/category_colors" />
 
         <activity
-            android:name=".MusicPlayer"
+            android:name=".SimpleMusicPlayer"
             android:label="@string/category_music_player" />
 
     </application>
