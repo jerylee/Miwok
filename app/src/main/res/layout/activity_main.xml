@@ -45,10 +45,26 @@
         android:background="@color/category_phrases"
         android:text="@string/category_phrases" />
 
-    <TextView
-        android:id="@+id/music_player"
-        style="@style/CategoryStyle"
-        android:background="@color/category_music_player"
-        android:text="@string/category_music_player" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/simple_music_player"
+            style="@style/CategoryMusic"
+            android:layout_weight="1"
+            android:background="@color/category_music_player"
+            android:text="@string/category_simple_music_player" />
+
+        <TextView
+            android:id="@+id/music_player"
+            style="@style/CategoryMusic"
+            android:layout_weight="1"
+            android:background="@color/category_music_player"
+            android:text="@string/category_music_player" />
+
+    </LinearLayout>
+
 
 </LinearLayout>

@@ -32,6 +32,10 @@
 
         <activity
             android:name=".SimpleMusicPlayer"
+            android:label="@string/category_simple_music_player" />
+
+        <activity
+            android:name=".MusicPlayer"
             android:label="@string/category_music_player" />
 
     </application>

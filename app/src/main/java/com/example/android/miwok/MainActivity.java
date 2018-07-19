@@ -19,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
         TextView family = findViewById(R.id.family);
         TextView colors = findViewById(R.id.colors);
         TextView phrases = findViewById(R.id.phrases);
+        TextView simpleMusic = findViewById(R.id.simple_music_player);
         TextView music = findViewById(R.id.music_player);
 
 
@@ -57,10 +58,18 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        music.setOnClickListener(new View.OnClickListener() {
+        simpleMusic.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent musicIntent = new Intent(MainActivity.this, SimpleMusicPlayer.class);
+                startActivity(musicIntent);
+            }
+        });
+
+        music.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent musicIntent = new Intent(MainActivity.this, MusicPlayer.class);
                 startActivity(musicIntent);
             }
         });
