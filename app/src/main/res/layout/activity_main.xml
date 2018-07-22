@@ -54,7 +54,7 @@
             android:id="@+id/simple_music_player"
             style="@style/CategoryMusic"
             android:layout_weight="1"
-            android:background="@color/category_music_player"
+            android:background="@color/category_simple_music_player"
             android:text="@string/category_simple_music_player" />
 
         <TextView

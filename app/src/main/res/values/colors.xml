@@ -28,6 +28,9 @@
     <color name="category_phrases">#16AFCA</color>
 
     <!-- Background color for the phrases category -->
+    <color name="category_simple_music_player">#00ff6a</color>
+
+    <!-- Background color for the phrases category -->
     <color name="category_music_player">#0bf107</color>
 
 </resources>

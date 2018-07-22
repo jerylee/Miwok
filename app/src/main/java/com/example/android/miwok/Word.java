@@ -5,6 +5,7 @@ public class Word {
 
     private String mMiwokTranslation;
     private String mDefaultTranslation;
+    private int mAudioResourceId;
 
     private static final int NO_IMAGE_PROVIDED = -1; //<--- set NO Image
     private int mImageResourceId = NO_IMAGE_PROVIDED;
@@ -19,9 +20,10 @@ public class Word {
      * @param miwokTranslation   this String Value
      * @param defaultTranslation this String Value
      */
-    public Word(String miwokTranslation, String defaultTranslation) {
+    public Word(String miwokTranslation, String defaultTranslation, int audioResourceId) {
         mMiwokTranslation = miwokTranslation;
         mDefaultTranslation = defaultTranslation;
+        mAudioResourceId = audioResourceId;
     }
 
     /**
@@ -31,15 +33,11 @@ public class Word {
      * @param defaultTranslation this String Value
      * @param ImageResourceId    this is Integer / int value
      */
-    public Word(String miwokTranslation, String defaultTranslation, int ImageResourceId) {
-        mImageResourceId = ImageResourceId;
+    public Word(String miwokTranslation, String defaultTranslation, int audioResourceId, int imageResourceId) {
+        mImageResourceId = imageResourceId;
         mMiwokTranslation = miwokTranslation;
         mDefaultTranslation = defaultTranslation;
-    }
-
-
-    public int getImageResourceId() {
-        return mImageResourceId;
+        mAudioResourceId = audioResourceId;
     }
 
     public String getmDefaultTranslation() {
@@ -49,6 +47,15 @@ public class Word {
     public String getmMiwokTranslation() {
         return mMiwokTranslation;
     }
+
+    public int getImageResourceId() {
+        return mImageResourceId;
+    }
+
+    public int getAudioResourceId() {
+        return mAudioResourceId;
+    }
+
 
     //for make option Have Image or NOT
     public boolean hasImage() {
