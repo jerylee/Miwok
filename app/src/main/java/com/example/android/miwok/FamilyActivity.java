@@ -42,7 +42,7 @@ public class FamilyActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
 
                 Word word = words.get(i);
-                Toast.makeText(FamilyActivity.this, "got click", Toast.LENGTH_SHORT).show();
+//                Toast.makeText(FamilyActivity.this, "got click", Toast.LENGTH_SHORT).show();
                 mMediaPlayer = MediaPlayer.create(FamilyActivity.this, word.getAudioResourceId());
                 mMediaPlayer.start();
             }

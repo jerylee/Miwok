@@ -3,6 +3,7 @@ package com.example.android.miwok;
 import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
@@ -14,6 +15,7 @@ import java.util.ArrayList;
 public class NumberActivity extends AppCompatActivity {
 
     private MediaPlayer mMediaPlayer;
+    private static final String TAG = "Number Activity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -98,9 +100,14 @@ public class NumberActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
 
                 Word word = words.get(i);
-                Toast.makeText(NumberActivity.this, "got click", Toast.LENGTH_SHORT).show();
+
+
+//                Toast.makeText(NumberActivity.this, "got click", Toast.LENGTH_SHORT).show();
                 mMediaPlayer = MediaPlayer.create(NumberActivity.this, word.getAudioResourceId());
                 mMediaPlayer.start();
+
+                //create Log for checking
+                Log.v(TAG, "Current Word: " + word.toString());
             }
         });
 

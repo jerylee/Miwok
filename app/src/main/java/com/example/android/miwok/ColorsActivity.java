@@ -41,7 +41,7 @@ public class ColorsActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
 
                 Word word = words.get(i);
-                Toast.makeText(ColorsActivity.this, "got click", Toast.LENGTH_SHORT).show();
+//                Toast.makeText(ColorsActivity.this, "got click", Toast.LENGTH_SHORT).show();
                 mMediaPlayer = MediaPlayer.create(ColorsActivity.this, word.getAudioResourceId());
                 mMediaPlayer.start();
             }

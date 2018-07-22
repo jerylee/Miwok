@@ -19,6 +19,7 @@ public class Word {
      *
      * @param miwokTranslation   this String Value
      * @param defaultTranslation this String Value
+     * @param audioResourceId this for AudioId
      */
     public Word(String miwokTranslation, String defaultTranslation, int audioResourceId) {
         mMiwokTranslation = miwokTranslation;
@@ -31,13 +32,14 @@ public class Word {
      *
      * @param miwokTranslation   this String Value
      * @param defaultTranslation this String Value
-     * @param ImageResourceId    this is Integer / int value
+     * @param imageResourceId    this is Integer / int value
      */
     public Word(String miwokTranslation, String defaultTranslation, int audioResourceId, int imageResourceId) {
-        mImageResourceId = imageResourceId;
+
         mMiwokTranslation = miwokTranslation;
         mDefaultTranslation = defaultTranslation;
         mAudioResourceId = audioResourceId;
+        mImageResourceId = imageResourceId;
     }
 
     public String getmDefaultTranslation() {
@@ -56,9 +58,20 @@ public class Word {
         return mAudioResourceId;
     }
 
-
     //for make option Have Image or NOT
     public boolean hasImage() {
         return mImageResourceId != NO_IMAGE_PROVIDED;
+    }
+
+
+    //Deceleration to String so weh can reace log for checking later
+    @Override
+    public String toString() {
+        return "Word{" +
+                "mMiwokTranslation='" + mMiwokTranslation + '\'' +
+                ", mDefaultTranslation='" + mDefaultTranslation + '\'' +
+                ", mAudioResourceId=" + mAudioResourceId +
+                ", mImageResourceId=" + mImageResourceId +
+                '}';
     }
 }
