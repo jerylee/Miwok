@@ -21,4 +21,5 @@
     <string name="play">Play</string>
     <string name="forward"><![CDATA[>>]]></string>
     <string name="backward"><![CDATA[<<]]></string>
+    <string name="android_life_cycle">Android Life Cycle</string>
 </resources>

@@ -38,6 +38,12 @@
             android:name=".MusicPlayer"
             android:label="@string/category_music_player" />
 
+        <activity
+            android:name=".AndroidLifeCycle"
+            android:label="@string/android_life_cycle">
+
+        </activity>
+
     </application>
 
 </manifest>

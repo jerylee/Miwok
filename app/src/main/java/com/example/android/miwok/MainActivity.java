@@ -1,6 +1,7 @@
 package com.example.android.miwok;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -21,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
         TextView phrases = findViewById(R.id.phrases);
         TextView simpleMusic = findViewById(R.id.simple_music_player);
         TextView music = findViewById(R.id.music_player);
+        TextView androidLifeCycle = findViewById(R.id.life_cycle);
 
 
         numbers.setOnClickListener(new View.OnClickListener() {
@@ -74,7 +76,13 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
+        androidLifeCycle.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent x = new Intent(MainActivity.this, AndroidLifeCycle.class);
+                startActivity(x);
+            }
+        });
     }
 
     /*
