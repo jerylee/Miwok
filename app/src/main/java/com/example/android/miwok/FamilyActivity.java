@@ -17,7 +17,7 @@ public class FamilyActivity extends AppCompatActivity {
     private MediaPlayer.OnCompletionListener mCompletionListener = new MediaPlayer.OnCompletionListener() {
         @Override
         public void onCompletion(MediaPlayer mediaPlayer) {
-            realaseMediaPlayer();
+            releaseMediaPlayer();
         }
     };
 
@@ -48,7 +48,7 @@ public class FamilyActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 Word word = words.get(i);
-                realaseMediaPlayer();
+                releaseMediaPlayer();
                 mMediaPlayer = MediaPlayer.create(FamilyActivity.this, word.getAudioResourceId());
                 mMediaPlayer.start();
                 mMediaPlayer.setOnCompletionListener(mCompletionListener);
@@ -58,7 +58,14 @@ public class FamilyActivity extends AppCompatActivity {
 
     }
 
-    private void realaseMediaPlayer() {
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        releaseMediaPlayer();
+    }
+
+    private void releaseMediaPlayer() {
         if (mMediaPlayer != null) {
             mMediaPlayer.release();
             mMediaPlayer = null;

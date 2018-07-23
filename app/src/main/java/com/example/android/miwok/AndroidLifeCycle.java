@@ -6,7 +6,9 @@ import android.util.Log;
 
 public class AndroidLifeCycle extends AppCompatActivity {
 
-    final static String LOG = "LOG : Android life Cycle";
+    private static final String LOG = "LOG : Android life Cycle";
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
