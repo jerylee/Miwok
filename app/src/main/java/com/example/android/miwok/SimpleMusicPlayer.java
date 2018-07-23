@@ -12,6 +12,13 @@ public class SimpleMusicPlayer extends AppCompatActivity {
     private Button b1, b2;
     private MediaPlayer mediaPlayer;
 
+    private MediaPlayer.OnCompletionListener mCompletionListener = new MediaPlayer.OnCompletionListener() {
+        @Override
+        public void onCompletion(MediaPlayer mediaPlayer) {
+            releaseMediaPlayer();
+        }
+    };
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,14 +29,22 @@ public class SimpleMusicPlayer extends AppCompatActivity {
         b2 = findViewById(R.id.btn_pause);
 
 
-        mediaPlayer = MediaPlayer.create(this, R.raw.song);
+        mediaPlayer = MediaPlayer.create(this, R.raw.number_one);
 
 
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(getApplicationContext(), "Playing sound", Toast.LENGTH_SHORT).show();
+                //             Toast.makeText(getApplicationContext(), "Playing sound", Toast.LENGTH_SHORT).show();
                 mediaPlayer.start();
+
+//                mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+//                    @Override
+//                    public void onCompletion(MediaPlayer mediaPlayer) {
+//                        Toast.makeText(getApplicationContext(), "Finish", Toast.LENGTH_SHORT).show();
+//                        mediaPlayer.release();
+//                    }
+//                });
             }
         });
 
@@ -41,5 +56,12 @@ public class SimpleMusicPlayer extends AppCompatActivity {
             }
         });
 
+    }
+
+    private void releaseMediaPlayer() {
+        if (mediaPlayer != null) {
+            mediaPlayer.release();
+            mediaPlayer = null;
+        }
     }
 }

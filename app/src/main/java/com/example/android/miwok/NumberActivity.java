@@ -17,6 +17,13 @@ public class NumberActivity extends AppCompatActivity {
     private MediaPlayer mMediaPlayer;
     private static final String TAG = "Number Activity";
 
+    private MediaPlayer.OnCompletionListener mCompletionListener = new MediaPlayer.OnCompletionListener() {
+        @Override
+        public void onCompletion(MediaPlayer mediaPlayer) {
+            releaseMediaPlayer();
+        }
+    };
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -99,6 +106,7 @@ public class NumberActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
 
+                releaseMediaPlayer();
                 Word word = words.get(i);
 
 
@@ -106,6 +114,7 @@ public class NumberActivity extends AppCompatActivity {
                 mMediaPlayer = MediaPlayer.create(NumberActivity.this, word.getAudioResourceId());
                 mMediaPlayer.start();
 
+                mMediaPlayer.setOnCompletionListener(mCompletionListener);
                 //create Log for checking
                 Log.v(TAG, "Current Word: " + word.toString());
             }
@@ -124,5 +133,13 @@ public class NumberActivity extends AppCompatActivity {
         //        Spinner gridView = findViewById(R.id.rootView);
         //        gridView.setAdapter(itemAdapter);
 
+
+    }
+
+    private void releaseMediaPlayer() {
+        if (mMediaPlayer != null) {
+            mMediaPlayer.release();
+            mMediaPlayer = null;
+        }
     }
 }
