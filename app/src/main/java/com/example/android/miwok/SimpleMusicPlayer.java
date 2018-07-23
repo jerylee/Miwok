@@ -29,14 +29,17 @@ public class SimpleMusicPlayer extends AppCompatActivity {
         b2 = findViewById(R.id.btn_pause);
 
 
-        mediaPlayer = MediaPlayer.create(this, R.raw.number_one);
-
+        mediaPlayer = MediaPlayer.create(SimpleMusicPlayer.this, R.raw.number_one);
 
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //             Toast.makeText(getApplicationContext(), "Playing sound", Toast.LENGTH_SHORT).show();
+//                             Toast.makeText(getApplicationContext(), "Playing sound", Toast.LENGTH_SHORT).show();
+//                releaseMediaPlayer();
+//                mediaPlayer = MediaPlayer.create(SimpleMusicPlayer.this, R.raw.number_one);
                 mediaPlayer.start();
+//                mediaPlayer.setOnCompletionListener(mCompletionListener);
+
 
 //                mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
 //                    @Override

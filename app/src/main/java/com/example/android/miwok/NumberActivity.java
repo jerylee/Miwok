@@ -106,10 +106,10 @@ public class NumberActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
 
-                releaseMediaPlayer();
                 Word word = words.get(i);
 
 
+                releaseMediaPlayer();
 //                Toast.makeText(NumberActivity.this, "got click", Toast.LENGTH_SHORT).show();
                 mMediaPlayer = MediaPlayer.create(NumberActivity.this, word.getAudioResourceId());
                 mMediaPlayer.start();

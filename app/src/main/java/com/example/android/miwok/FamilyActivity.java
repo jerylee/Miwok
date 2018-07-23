@@ -14,6 +14,13 @@ public class FamilyActivity extends AppCompatActivity {
 
     private MediaPlayer mMediaPlayer;
 
+    private MediaPlayer.OnCompletionListener mCompletionListener = new MediaPlayer.OnCompletionListener() {
+        @Override
+        public void onCompletion(MediaPlayer mediaPlayer) {
+            realaseMediaPlayer();
+        }
+    };
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,14 +47,22 @@ public class FamilyActivity extends AppCompatActivity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-
                 Word word = words.get(i);
-//                Toast.makeText(FamilyActivity.this, "got click", Toast.LENGTH_SHORT).show();
+                realaseMediaPlayer();
                 mMediaPlayer = MediaPlayer.create(FamilyActivity.this, word.getAudioResourceId());
                 mMediaPlayer.start();
+                mMediaPlayer.setOnCompletionListener(mCompletionListener);
             }
         });
 
 
     }
+
+    private void realaseMediaPlayer() {
+        if (mMediaPlayer != null) {
+            mMediaPlayer.release();
+            mMediaPlayer = null;
+        }
+    }
+
 }
