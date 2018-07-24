@@ -19,29 +19,56 @@
 
         <activity
             android:name=".NumberActivity"
-            android:label="@string/category_numbers" />
+            android:label="@string/category_numbers">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
         <activity
             android:name=".PhrasesActivity"
-            android:label="@string/category_phrases" />
+            android:label="@string/category_phrases">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
         <activity
             android:name=".FamilyActivity"
-            android:label="@string/category_family" />
+            android:label="@string/category_family">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+
         <activity
             android:name=".ColorsActivity"
-            android:label="@string/category_colors" />
+            android:label="@string/category_colors">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
 
         <activity
             android:name=".SimpleMusicPlayer"
-            android:label="@string/category_simple_music_player" />
+            android:label="@string/category_simple_music_player">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
 
         <activity
             android:name=".MusicPlayer"
-            android:label="@string/category_music_player" />
+            android:label="@string/category_music_player">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
 
         <activity
             android:name=".AndroidLifeCycle"
             android:label="@string/android_life_cycle">
-
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
         </activity>
 
     </application>
