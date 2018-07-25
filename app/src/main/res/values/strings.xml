@@ -22,4 +22,9 @@
     <string name="forward"><![CDATA[>>]]></string>
     <string name="backward"><![CDATA[<<]]></string>
     <string name="android_life_cycle">Android Life Cycle</string>
+    <string name="my_view_pager">My View Pager</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="view_pager">My View Pager</string>
 </resources>

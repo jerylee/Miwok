@@ -19,7 +19,6 @@
     android:background="@color/tan_background"
     tools:context="com.example.android.miwok.MainActivity">
 
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -125,6 +124,19 @@
                 style="@style/CategoryStyle"
                 android:background="?android:attr/selectableItemBackground"
                 android:text="@string/android_life_cycle" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/category_life_cycle">
+
+            <TextView
+                android:id="@+id/view_pager"
+                style="@style/CategoryStyle"
+                android:background="?android:attr/selectableItemBackground"
+                android:text="@string/view_pager" />
 
         </FrameLayout>
 
